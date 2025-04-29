@@ -7,9 +7,20 @@ import { ApolloProvider } from '@apollo/client';
 import PedidoState from '@/context/pedidos/PedidoState';
 import client from '../.config/apollo';
 import Header from './components/Header';
+import { useRouter } from 'next/navigation';
 
 export default function RootLayout({ children }) {
     const pathName = usePathname();
+    const router = useRouter();
+    useEffect(() => {
+        // Verificar si el usuario tiene un token (o está autenticado)
+        const token = localStorage.getItem('authToken'); // O cómo lo estés guardando
+
+        // Si no hay token y la ruta no es de login o registro, redirige a login
+        if (!token && pathName !== '/login' && pathName !== '/register') {
+            router.push('/login');
+        }
+    }, [pathName, router]);
     return (
         <html lang='es'>
             <head>
