@@ -9,15 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "@apollo/client": "^3.13.5",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "apollo-link-context": "^1.0.20",
+    "axios": "^1.8.4",
+    "buffer": "^6.0.3",
+    "formik": "^2.4.6",
+    "graphql": "^16.10.0",
+    "next": "15.2.4",
+    "node-fetch": "^3.3.2",
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "normalize.css": "^8.0.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-select": "^5.10.1",
+    "recharts": "^2.15.3",
+    "stream-browserify": "^3.0.0",
+    "sweetalert2": "^11.17.2",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.17"
   }
 }
