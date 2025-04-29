@@ -1,6 +1,7 @@
 'use client';
 import './globals.css';
 import 'normalize.css';
+import { useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import { usePathname } from 'next/navigation';
 import { ApolloProvider } from '@apollo/client';
@@ -12,17 +13,16 @@ import { useRouter } from 'next/navigation';
 export default function RootLayout({ children }) {
     const pathName = usePathname();
     const router = useRouter();
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+
     // Verificar si el usuario tiene un token (o está autenticado)
-    const token = localStorage.getItem('authToken'); // O cómo lo estés guardando
 
     // Si no hay token y la ruta no es de login o registro, redirige a login
-    if (!token && pathName !== '/login' && pathName !== '/register') {
-        setIsAuthenticated(false);
-        router.push('/login');
-    } else {
-        setIsAuthenticated(true); // Si está autenticado, se mantiene el acceso
-    }
+    const token = localStorage.getItem('authToken'); // O cómo lo estés guardando
+    useEffect(() => {
+        if (!token && pathName !== '/login' && pathName !== '/register') {
+            router.push('/login');
+        }
+    }, [token]);
     return (
         <html lang='es'>
             <head>
