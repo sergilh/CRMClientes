@@ -1,37 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CRM de Clientes
 
-## Getting Started
+Este es un sistema CRM (Customer Relationship Management) desarrollado como proyecto fullstack. Permite gestionar clientes, productos, pedidos y usuarios, con autenticación y control de acceso.
 
-First, run the development server:
+## 🛠 Tecnologías utilizadas
+
+-   **Frontend**: [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [Apollo Client](https://www.apollographql.com/docs/react/)
+-   **Backend**: [Apollo Server](https://www.apollographql.com/docs/apollo-server/), [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/), GraphQL
+-   **Autenticación**: JSON Web Tokens (JWT)
+
+## 🚀 Funcionalidades
+
+-   Registro e inicio de sesión de usuarios
+-   Autenticación con JWT
+-   CRUD de clientes, productos y pedidos
+-   Gráficas con Recharts
+-   Modificación de clientes, pedidos y productos
+-   Gestión de stock y ventas
+-   Panel de administración con las mejores ventas
+
+## 📦 Instalación
+
+-Clona ambos repositorios (backend y frontend):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/sergilh/CRM-GraphQL.git
+git clone https://github.com/sergilh/CRMClientes.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-Instala las dependencias:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-Crea un archivo .env en la raíz del proyecto con las siguientes variables:
 
-## Learn More
+MONGO_DB=
+SECRET=
+PORT=4000
 
-To learn more about Next.js, take a look at the following resources:
+-Inicia el servidor de desarrollo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+npm run dev
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploy del Frontend en Producción
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# CRMClientes
+https://crm-clientes-omega.vercel.app/login

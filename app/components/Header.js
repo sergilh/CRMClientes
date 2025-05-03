@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { useRouter } from 'next/navigation';
+import { useApolloClient } from '@apollo/client';
 
 const OBTENER_USUARIO = gql`
     query Query {
@@ -16,6 +17,7 @@ const OBTENER_USUARIO = gql`
 const Header = () => {
     const { data, loading, error } = useQuery(OBTENER_USUARIO);
     const router = useRouter();
+    const client = useApolloClient();
 
     useEffect(() => {
         if (!loading && !data?.obtenerUsuario) {
@@ -30,8 +32,9 @@ const Header = () => {
 
     const { nombre, apellido } = data.obtenerUsuario;
 
-    const cerrarSesion = () => {
+    const cerrarSesion = async () => {
         localStorage.removeItem('token');
+        await client.clearStore();
         router.push('/login');
     };
 

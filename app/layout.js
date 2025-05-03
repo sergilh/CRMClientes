@@ -16,18 +16,23 @@ export default function RootLayout({ children }) {
 
     // Verificar si el usuario tiene un token (o está autenticado)
 
-    const [token, setToken] = useState(null); // Almacenamos el token en el estado
+    const [token, setToken] = useState(); // Almacenamos el token en el estado
 
     // Verificar si el usuario tiene un token (solo en el cliente)
     useEffect(() => {
         // Asegurarnos de que estamos en el cliente antes de acceder a localStorage
         if (typeof window !== 'undefined') {
-            const storedToken = localStorage.getItem('authToken');
+            const storedToken = localStorage.getItem('token');
+            console.log('Token leído de localStorage:', storedToken);
             setToken(storedToken); // Guardamos el token en el estado
         }
     }, []);
     useEffect(() => {
-        if (!token && pathName !== '/login' && pathName !== '/register') {
+        if (
+            token === null &&
+            pathName !== '/login' &&
+            pathName !== '/register'
+        ) {
             router.push('/login');
         }
     }, [token]);

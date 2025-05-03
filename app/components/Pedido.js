@@ -24,6 +24,7 @@ const OBTENER_PEDIDOS = gql`
 `;
 
 const Pedido = ({ pedido }) => {
+    console.log(pedido);
     const {
         id,
         total,

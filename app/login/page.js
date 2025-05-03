@@ -71,6 +71,10 @@ export default function Login() {
             </div>
         );
     };
+
+    const registerRedirect = () => {
+        return router.push('/register');
+    };
     return (
         <div>
             {message && showMessage()}
@@ -131,9 +135,17 @@ export default function Login() {
                         ) : null}
                         <input
                             type='submit'
-                            className='bg-gray-800 w-full mt-5 p-2 text-white hover:bg-gray-900'
+                            className='bg-gray-800 w-full mt-5  p-2 text-white hover:bg-gray-900'
                             value='Iniciar sesión'
                         />
+                        <div className='mt-2'>
+                            <button
+                                type='button'
+                                onClick={registerRedirect}
+                                className='bg-gray-800 w-full mt-5  p-2 text-white hover:bg-gray-900'>
+                                Regístrate
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
