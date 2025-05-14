@@ -2,7 +2,7 @@ import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from 'apollo-link-context';
 //Automatizar el token
 const httpLink = createHttpLink({
-    uri: 'https://stark-wave-35680-6b3d15f668a0.herokuapp.com/',
+    uri: 'http://localhost:4000/',
     fetch,
 });
 

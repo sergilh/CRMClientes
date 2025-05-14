@@ -18,7 +18,7 @@ Este es un sistema CRM (Customer Relationship Management) desarrollado como proy
 -   Gestión de stock y ventas
 -   Panel de administración con las mejores ventas
 
-## 📦 Instalación
+## 📦 Instalación y ejecución
 
 -Clona ambos repositorios (backend y frontend):
 
@@ -44,3 +44,35 @@ npm run dev
 ## Deploy del Frontend en Producción
 
 https://crm-clientes-omega.vercel.app/login
+
+## 📸 Capturas de pantalla
+
+### Login
+
+![Login](/public/15.PNG)
+
+### Inicio (Página principal)
+
+![Inicio (Página principal)](/public/16.PNG)
+
+### Edición de cliente/producto
+
+![Edición de cliente/producto](/public/17.PNG)
+![Edición de cliente/producto](/public/18.PNG)
+
+### Sección de Pedidos
+
+![Sección de Pedidos](/public/19.PNG)
+
+### Sección de Productos
+
+![Sección de Productos](/public/20.PNG)
+
+### Gráficas Mejores Clientes/Vendedores
+
+![Gráficas Mejores Vendedores](/public/21.PNG)
+![Gráficas Mejores Clientes](/public/22.PNG)
+
+### Registro
+
+![Registro](/public/23.PNG)
