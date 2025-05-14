@@ -2,7 +2,7 @@ import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
 import { setContext } from 'apollo-link-context';
 //Automatizar el token
 const httpLink = createHttpLink({
-    uri: 'http://localhost:4000/',
+    uri: 'https://crm-graphql-m6bx.onrender.com/graphql',
     fetch,
 });
 
